@@ -1,4 +1,4 @@
-📂 Banco de Dados – Projetos SQL
+# 📂 Banco de Dados 
 
 Este repositório contém três bancos de dados de exemplo desenvolvidos em MySQL, cada um representando um contexto diferente:
 
