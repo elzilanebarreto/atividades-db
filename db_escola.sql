@@ -10,7 +10,7 @@ CREATE TABLE tb_estudantes(
     nome VARCHAR(255) NOT NULL,
     data_nascimento DATE,
     turma VARCHAR(10),
-    nota DECIMAL(6,2) NOT NULL
+    nota DECIMAL(3,2) NOT NULL
 );
 
 -- Inserindo valores
