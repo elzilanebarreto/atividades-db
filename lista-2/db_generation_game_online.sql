@@ -54,13 +54,13 @@ SELECT * FROM tb_personagens WHERE poder_ataque BETWEEN 1000 AND 2000;
 SELECT * FROM tb_personagens WHERE nome LIKE "%C%";
 
 -- Filtro com união das tabelas (com id da classe e outro sem)
-SELECT tb_personagens.nome AS nome_personagem, nivel, poder_ataque, vida, tb_classes.nome AS nome_classe, tb_classes.tipo FROM 
-tb_personagens INNER JOIN tb_classes 
-ON tb_personagens.classe_id = tb_classes.id;
-
 SELECT * FROM 
 tb_personagens INNER JOIN tb_classes 
-ON tb_personagens.classe_id = tb_classes.id;    
+ON tb_personagens.classe_id = tb_classes.id;  
+
+SELECT tb_personagens.nome AS nome_personagem, nivel, poder_ataque, vida, tb_classes.nome AS nome_classe, tb_classes.tipo FROM 
+tb_personagens INNER JOIN tb_classes 
+ON tb_personagens.classe_id = tb_classes.id;  
 
 -- Filtro com personagens que pertencem apenas uma classe
 SELECT tb_personagens.nome, nivel, poder_ataque, vida, tb_classes.nome AS nome_classe FROM
