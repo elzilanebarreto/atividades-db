@@ -11,8 +11,8 @@ USE db_generation_game_online;
 -- Criando tabelas 
 CREATE TABLE tb_classes(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100),
-    tipo VARCHAR(255)
+    nome VARCHAR(100) NOT NULL,
+    descricao VARCHAR(255)
 );
 
 CREATE TABLE tb_personagens(
@@ -27,7 +27,7 @@ CREATE TABLE tb_personagens(
 );
 
 -- Inserindo resgistros: 5 nas classes e 8 nos personagens
-INSERT INTO tb_classes (id, nome, tipo) 
+INSERT INTO tb_classes (id, nome, descricao) 
 VALUES (1, 'Guerreiro', 'Corpo a Corpo'),
 	(2, 'Mago', 'Magia'),
 	(3, 'Arqueiro', 'Distância'),
@@ -58,7 +58,7 @@ SELECT * FROM
 tb_personagens INNER JOIN tb_classes 
 ON tb_personagens.classe_id = tb_classes.id;  
 
-SELECT tb_personagens.nome AS nome_personagem, nivel, poder_ataque, vida, tb_classes.nome AS nome_classe, tb_classes.tipo FROM 
+SELECT tb_personagens.nome AS nome_personagem, nivel, poder_ataque, vida, tb_classes.nome AS nome_classe, tb_classes.descricao FROM 
 tb_personagens INNER JOIN tb_classes 
 ON tb_personagens.classe_id = tb_classes.id;  
 

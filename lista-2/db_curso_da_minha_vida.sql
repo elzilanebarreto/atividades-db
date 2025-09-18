@@ -11,7 +11,7 @@ USE db_curso_da_minha_vida;
 -- Criando tabelas 
 CREATE TABLE tb_categorias(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    tipo VARCHAR(100),
+    tipo VARCHAR(100) NOT NULL,
     descricao VARCHAR(255)
 );
 
